@@ -32,7 +32,7 @@ a{
     text-decoration: none;
     color: black;
 }
-ul, ol{
+ul {
     list-style:none;
     padding: 0;
 }
@@ -72,4 +72,53 @@ ul, ol{
 }
 .copyright{    
     text-align: center;
+}
+
+//calculator
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #161313;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 300px;
+    width: 90%;
+}
+ 
+.displays{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;    
+    margin: 1rem;
+}
+.calculator .displays{
+    justify-content: flex-end;
+}
+
+.secondary_display{
+    text-align: end;
+    border: 0;
+    display: flex;
+
+}
+
+.main_display {
+    border: 0;
+    text-align: end;   
+    padding: 5px;
+    font-size: 1.5em;
+}
+  
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+  
+button {
+    padding: 10px;
+    font-size: 1.2em;
 }
