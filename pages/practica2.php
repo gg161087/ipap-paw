@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/style.css">
-    <title>Práctica 1</title>
+    <title>Practica 2 - IPAP PAW</title>
 </head>
 <body>
     <header id="header" class="header"> 
         <div class="container">
-            <h1 class="title"><b><i>Práctica 1</i></b></h1>    
+            <h1 class="title"><b><i>Práctica 2</i></b></h1>    
             <div class="header-container">
                 <div class="logo">
                     <h3>LOGO</h3>
@@ -35,20 +35,44 @@
     <main class="main container">
         <div class="container">
             <h2>Respuestas:</h2>
-            <ol>
-                <li>Proyecto agregado correctamente en c:/xampp/htdocs </li>
-                <li>Index.html creado correctamente en el directorio del proyecto
-                    La diferencia es la URL, uno abre en el directorio/ubicacion del archivo
-                    y en otro atravez de un servicio de un servidor(Apache)
+            <ol>                
+                <?php 
+                    $num = 8;
+                    echo '<li>No soy un h1, pero soy un li y con una variable numerica en php: '.$num.'</li>';
+                    $numRand = rand(1, 10);
+                    echo '<li>Variable numerica random entre 1 y 10: '.$numRand.'</li>';
+                    if($numRand % 2 == 0){
+                        echo '<li>Variable numerica random '.$numRand.' es par</li>';
+                    }else {
+                        echo '<li>Variable numerica random '.$numRand.' es impar</li>';
+                    }
+                    $myArray = [];
+                    $myArray[1] = "hola";
+                    $myArray[2] = "mundo";
+                    $myArray[3] = "soy";
+                    $myArray[4] = "un";
+                    $myArray[5] = "vector";
+
+                    echo '<li>Vector creado</li>';
+                ?>
+                <li>
+                    <ul>
+                        <?php
+                        $i = 1;
+                        foreach ($myArray as $valor) { 
+                            echo '<li>'.$i. '-' .$valor.'</li>';
+                            $i++;
+                        }
+                        ?>          
+                    </ul>
                 </li>
-                <li>Titúlo agregado correctamente</li>
-                <li><b><i>Negrita Cursiva </i></b></li>
-                <li><a href="https://www.google.com" target="_blank">Google</a></li>
-                <li><p>Hola soy un <b>parrafo</b></p></li>
-                <li>En el header o footer se encuentran accesos al home y calculadora</li>
+                    
+                    
+
+                
             </ol>
-            <div class="imagenes">
-            </div>
+            
+           
         </div>
     </main>
     <footer class="footer">
